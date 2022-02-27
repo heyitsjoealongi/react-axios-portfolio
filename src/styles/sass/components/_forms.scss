@@ -1,0 +1,224 @@
+//// Forms
+
+%form {
+  position: relative;
+  width: 25vw;
+  margin: 3em auto;
+  margin-bottom: 0;
+  color: transparent;
+  font-family: $sans-serif;
+  font-weight: $sans-serif-regular;
+  .form-group {
+    width: 100%;
+    margin: 0.9em;
+    .form-control {
+      background-color: transparent;
+      color: transparent;
+      border-color: transparent;
+      border-width: 0.03em;
+      border-radius: 0 !important;
+      border-style: solid;
+      width: 100%;
+      height: 3.6em;
+      padding: 1.6em;
+      border-radius: 0.3em 0 0 0.3em;
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        box-shadow: transparent;
+      }
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+}
+
+%form-inline {
+  width: 30vw;
+  margin: 3em auto;
+  margin-bottom: 0;
+  color: transparent;
+  font-family: $sans-serif;
+  font-weight: $sans-serif-regular;
+  .form-group {
+    width: 75%;
+    margin: 0;
+    .form-control {
+      background-color: transparent;
+      color: transparent;
+      border-color: transparent;
+      border-width: 0.03em;
+      border-radius: 0 !important;
+      border-style: solid;
+      width: 100%;
+      height: 3.6em;
+      padding: 1.6em;
+      border-radius: 0.3em 0 0 0.3em;
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        box-shadow: transparent;
+      }
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  .btn {
+    width: 25%;
+    height: 3.6em;
+    color: transparent;
+    background-color: transparent;
+    font-family: $serif;
+    font-weight: $serif-regular;
+    border-width: 0.03em;
+    border-style: solid;
+    border-radius: 0 !important;
+    border-color: transparent;
+    &:hover,
+    &:active,
+    &.active {
+      border-color: transparent;
+      box-shadow: transparent;
+    }
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+      box-shadow: transparent;
+    }
+  }
+}
+
+//Login Form
+
+.login {
+  background-color: $light;
+  padding: 6em;
+  text-align: center;
+  .form {
+    @extend %form;
+    color: $primary;
+    .form-group {
+      margin: 0.9em 0;
+      .form-control {
+        color: $primary;
+        border-color: $primary;
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+          border-color: $primary-ternary;
+          box-shadow: 0 0 0 3px $primary-ternary;
+        }
+        &:hover,
+        &:active,
+        &.active {
+          border-color: $primary;
+        }
+        &::placeholder {
+          color: $primary-ternary;
+        }
+      }
+    }
+  }
+}
+
+//Form Inline
+
+.newsletter {
+  background-color: $secondary;
+  padding: 6em;
+  text-align: center;
+  .form-inline {
+    @extend %form-inline;
+    color: $primary;
+    .form-group {
+      .form-control {
+        color: $primary;
+        border-color: $primary;
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+          border-color: $primary-ternary;
+          box-shadow: 0 0 0 3px $primary-ternary;
+        }
+        &:hover,
+        &:active,
+        &.active {
+          border-color: $primary;
+        }
+        &::placeholder {
+          color: $primary-ternary;
+        }
+      }
+    }
+    .btn {
+      color: $secondary !important;
+      background-color: $primary;
+      border-color: $primary;
+      &:hover,
+      &:active,
+      &.active {
+        color: $primary !important;
+        background-color: $secondary-secondary;
+        border-color: $secondary-secondary;
+        transition: all;
+        transition-delay: 0.1s;
+        transition-duration: 0.3s;
+        transition-timing-function: linear;
+      }
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        box-shadow: 0 0 0 3px $primary-ternary !important;
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width: 1400px) {
+  .newsletter,
+  .login {
+    .form-inline,
+    .form {
+      width: 60vw;
+      .form-group {
+        width: 100%;
+        .form-control {
+          border-radius: 0 !important;
+          &::placeholder {
+            text-align: center;
+          }
+        }
+      }
+      .btn {
+        width: 100%;
+        border-radius: 0 !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .newsletter,
+  .login {
+    padding: 3em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .newsletter,
+  .login {
+    .form-inline,
+    .form {
+      width: 100%;
+    }
+    .col-xl-12 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

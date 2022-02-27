@@ -1,0 +1,98 @@
+//// react-axios-portfolio Framework
+
+// Border Box
+
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+// App
+html {
+  font-display: auto;
+  font-style: normal;
+  font-smooth: auto;
+}
+
+body {
+  height: auto;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 16px;
+  background-color: $light;
+  &:hover,
+  &:active,
+  &.active,
+  &:hover,
+  &:active,
+  &.active {
+    transition: all;
+    transition-delay: 0.1s;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+  }
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+// Render
+
+main {
+  display: block;
+  position: relative;
+  height: auto;
+  max-width: 100vw;
+}
+
+// Flex Row
+
+.flx {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.flxb {
+  align-self: center;
+  flex-basis: auto;
+}
+
+// Flex Column
+
+.flxc {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.flxcb {
+  align-self: center;
+  flex-basis: auto;
+  width: 100%;
+  height: 100%;
+}
+
+// Images
+
+img {
+  max-width: 100%;
+  height: auto;
+}

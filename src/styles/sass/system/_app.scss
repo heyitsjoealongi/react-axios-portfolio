@@ -1,0 +1,46 @@
+//// react-axios-portfolio App
+
+// System Colors
+
+$primary: #282c34;
+$primary-secondary: #282c34;
+$primary-ternary: rgba(40, 44, 52, 0.3);
+
+$secondary: #61dafb;
+$secondary-secondary: #61dafb;
+$secondary-ternary: rgba(97, 218, 251, 0.3);
+
+$dark: #000;
+$dark-secondary: #000;
+$dark-ternary: rgba(0, 0, 0, 0.3);
+
+$light: #fff;
+$light-secondary: #fff;
+$light-ternary: rgba(255, 255, 255, 0.3);
+
+$alternate: #f0f3f7;
+
+// System Shadows
+
+$small-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+$medium-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.3);
+$large-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.3);
+$small-drop-shadow: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.3));
+$medium-drop-shadow: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+$large-drop-shadow: drop-shadow(0 30px 30px rgba(0, 0, 0, 0.3));
+
+// System Fonts Import
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700;900&display=swap");
+
+// System Fonts
+
+$sans-serif: "Noto Sans", sans-serif;
+$serif: "Noto Sans", sans-serif;
+
+// System Font Weights
+
+$sans-serif-regular: 300;
+$sans-serif-bold: 500;
+$serif-regular: 700;
+$serif-bold: 900;

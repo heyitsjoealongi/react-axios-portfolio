@@ -1,0 +1,48 @@
+// 404
+
+.no-match {
+  position: relative;
+  color: $dark !important;
+  background: $light !important;
+  text-align: left !important;
+  padding: 9vw;
+  .btn {
+    display: block;
+  }
+}
+
+// Privacy Policy
+
+.privacy-policy {
+  position: relative;
+  color: $dark !important;
+  background: $light !important;
+  text-align: left !important;
+  padding: 9vw;
+
+  .image {
+    display: flex;
+    margin-bottom: 6vw;
+    max-height: 300px;
+    width: 100%;
+    overflow: hidden;
+    border-width: 0.03em;
+    border-style: solid;
+    border-radius: 0 !important;
+    border-color: $primary;
+    box-shadow: $large-shadow;
+    img,
+    picture {
+      align-self: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  a {
+    color: $secondary !important;
+    &:hover {
+      color: $dark !important;
+    }
+  }
+}

@@ -1,0 +1,174 @@
+// Footer
+%footer {
+  position: relative;
+  color: transparent;
+  background-color: transparent;
+  padding: 6em 3em 0 3em;
+  margin: 0;
+  .footer-brand {
+    color: transparent;
+    font-family: $sans-serif;
+    font-weight: $sans-serif-bold;
+    padding-bottom: 0.9em;
+  }
+  .footer-navigation {
+    a {
+      display: block;
+      padding-bottom: 0.9em;
+    }
+  }
+  h4 {
+    color: transparent;
+    padding-bottom: 0.9em;
+    margin: 0;
+  }
+  h6 {
+    color: transparent;
+    font-size: 10px;
+    padding: 0.9em 0 0.3em 0;
+  }
+  ul {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+    li {
+      color: transparent;
+      &:hover,
+      &:active,
+      &.active {
+        color: transparent;
+      }
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        background: transparent;
+        background-color: transparent;
+        box-shadow: transparent;
+      }
+      a {
+        font-size: 16px !important;
+        font-family: $sans-serif;
+        font-weight: $sans-serif-regular;
+        font-size: 14px;
+        transition: 0.3s;
+        padding-bottom: 0.9em;
+        transition-timing-function: linear;
+      }
+      .footer-icon {
+        padding-right: 0.6em;
+      }
+    }
+  }
+  svg {
+    fill: $light !important;
+    color: $light !important;
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:focus-visible,
+    &:active,
+    &.active {
+      fill: $secondary-secondary !important;
+      color: $secondary-secondary !important;
+    }
+  }
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1.9em !important;
+  }
+  .footer-social {
+    float: left;
+    padding-bottom: 0.3em !important;
+  }
+  .footer-contact {
+    .flx {
+      justify-content: flex-start;
+    }
+  }
+  .copyright {
+    color: $secondary-secondary !important;
+    padding: 0.9em 0;
+    hr {
+      border-color: $primary-ternary !important;
+    }
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      &:after {
+        display: block;
+        margin: 10px;
+      }
+      span {
+        display: flex;
+        padding: 0.3em;
+        a {
+          font-size: 12px !important;
+          font-weight: 400 !important;
+          &:hover {
+            text-decoration-line: underline !important;
+            text-decoration-style: solid !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Footer One
+.footer-main {
+  @extend %footer;
+  color: $light !important;
+  background-color: $primary;
+  .footer-brand {
+    color: $light;
+  }
+  h4 {
+    color: $secondary;
+  }
+  h6 {
+    color: $secondary;
+  }
+  p {
+    color: $light;
+  }
+  li {
+    a {
+      color: $light !important;
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:focus-visible,
+      &:active,
+      &.active {
+        color: $secondary !important;
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width: 600px) {
+  .footer-main {
+    padding: 3em 1.9em 0.6em 1.9em;
+    .footer-social {
+      padding-bottom: 3em;
+    }
+    .footer-navigation,
+    .footer-contact {
+      padding-bottom: 1.6em;
+      text-align: left !important;
+      margin: 0;
+      float: none;
+      display: inline-block;
+    }
+  }
+  .col-xl-12,
+  .col-xl-6,
+  .col-xl-3 {
+    padding: 0;
+    margin: 0;
+  }
+}

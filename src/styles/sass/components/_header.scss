@@ -1,0 +1,248 @@
+//// Header
+
+%header {
+  position: relative;
+  color: transparent;
+  background-color: transparent;
+  text-align: left;
+  .jumbotron {
+    padding: 6em;
+    margin: 0;
+    background-color: transparent;
+    .text {
+      padding: 3em;
+      h1 {
+        color: transparent;
+      }
+      h6 {
+        color: transparent;
+      }
+      p {
+        color: transparent;
+      }
+      a {
+        color: transparent;
+        font-size: 16px;
+        font-family: $sans-serif;
+        font-weight: $sans-serif-bold;
+      }
+    }
+    .image {
+      svg,
+      img {
+        border-width: 0.03em;
+        border-style: solid;
+        border-radius: 0 !important;
+        border-color: transparent;
+        box-shadow: $large-shadow;
+        background-image: linear-gradient(
+          -90deg,
+          rgba(160, 193, 209, 0.3) 0%,
+          rgba(238, 240, 242, 0.3) 100%
+        );
+      }
+    }
+  }
+}
+
+// Header Main
+
+.header-main {
+  @extend %header;
+  // background: url("");
+  background-size: cover;
+  background-position: bottom;
+  background-color: $alternate;
+
+  .jumbotron {
+    margin: 0 0 6em 0;
+    .text {
+      h1 {
+        color: $primary;
+      }
+      h6 {
+        color: $primary;
+      }
+      p {
+        color: $primary-secondary;
+      }
+    }
+    .image {
+      svg,
+      img {
+        width: 100%;
+        height: 600px;
+        border-color: $primary;
+      }
+    }
+  }
+}
+
+// Header Alt
+
+.header-alt {
+  @extend %header;
+  // background: url("");
+  background-size: cover;
+  background-position: top;
+  background-color: $alternate;
+  .container-fluid {
+    .jumbotron {
+      .text {
+        h1 {
+          color: $primary;
+        }
+        h6 {
+          color: $primary;
+        }
+        p {
+          color: $primary-secondary;
+          a {
+            color: $primary !important;
+            &:hover,
+            &:focus,
+            &:focus-within,
+            &:focus-visible,
+            &:active,
+            &.active {
+              color: $primary-ternary !important;
+              text-decoration: line-through !important;
+            }
+          }
+        }
+      }
+    }
+    .image {
+      svg,
+      img {
+        border-color: $primary;
+      }
+    }
+    .alternate-heading {
+      margin: 3em 0;
+    }
+  }
+  .technology-stack {
+    .technology {
+      float: left;
+      margin: 0 1.6em 0 0;
+      svg,
+      img {
+        height: 100px;
+        width: 100px;
+        padding: 0.6em;
+        border-width: 0.03em;
+        border-style: solid;
+        border-radius: 0;
+        border-color: $primary;
+        box-shadow: $small-shadow;
+        background-color: $primary;
+      }
+      p {
+        color: $primary-ternary;
+        margin: 1.6em 0;
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width: 1400px) {
+  .header-main {
+    padding: 6em;
+    .jumbotron {
+      padding: 0;
+      margin: 0;
+    }
+    .text {
+      .button-group {
+        margin-top: 3em;
+      }
+    }
+    .image {
+      img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 60vw !important;
+      }
+    }
+  }
+  .header-alt {
+    padding: 6em;
+    .jumbotron {
+      padding: 0;
+      margin: 0;
+      .text {
+        margin: 0 0 3em 0;
+      }
+      .image {
+        margin: 0 0 3em 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header-main {
+    padding: 3em;
+    .jumbotron {
+      .text {
+        order: 2;
+        padding: 0;
+        margin: 0;
+        .button-group {
+          padding: 0;
+          margin: 0;
+          margin-top: 3em;
+        }
+      }
+      .image {
+        order: 1;
+        padding: 0;
+        margin: 0;
+        margin: 0 0 3em 0;
+      }
+    }
+  }
+  .header-alt {
+    padding: 3em;
+    .jumbotron {
+      .text {
+        order: 1;
+        padding: 0;
+        margin: 0;
+        margin: 0 0 3em 0;
+      }
+      .image {
+        order: 2;
+        padding: 0;
+        margin: 0;
+        margin: 0 0 3em 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-main {
+    .col-xl-12 {
+      margin: 0;
+      padding: 0;
+    }
+    .button-group {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .header-alt {
+    .col-xl-12 {
+      margin: 0;
+      padding: 0;
+    }
+    .button-group {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
