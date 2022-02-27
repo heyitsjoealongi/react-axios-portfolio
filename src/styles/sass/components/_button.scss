@@ -1,0 +1,174 @@
+// Button
+
+%button {
+  position: relative;
+  color: transparent;
+  font-family: $serif !important;
+  font-weight: $serif-regular !important;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0.03em;
+  border-radius: 0 !important;
+  border-color: transparent;
+  padding: 0.9em 3em !important;
+  &:hover,
+  &:active,
+  &.active {
+    color: transparent;
+    background-color: transparent;
+    transition: all;
+    transition-delay: 0.1s;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+  }
+  &:focus,
+  &:focus-within,
+  &:focus-visible {
+    background: transparent;
+    background-color: transparent;
+    box-shadow: transparent;
+  }
+}
+
+// Button
+
+.button {
+  @extend %button;
+  color: $secondary !important;
+  background-color: $primary;
+  border-color: $primary;
+  &:hover,
+  &:active,
+  &.active {
+    color: $secondary !important;
+    background-color: $primary-secondary;
+    border-color: $primary-secondary;
+  }
+  &:focus,
+  &:focus-within,
+  &:focus-visible {
+    box-shadow: 0 0 0 3px $primary-ternary !important;
+  }
+}
+
+// Button Alt
+
+.button-alt {
+  @extend %button;
+  color: $primary !important;
+  border-color: $primary;
+  &:hover,
+  &:active,
+  &.active {
+    color: $primary !important;
+    background-color: $secondary;
+    border-color: $secondary;
+  }
+  &:focus,
+  &:focus-within,
+  &:focus-visible {
+    box-shadow: 0 0 0 3px $secondary-ternary !important;
+  }
+}
+
+// Button CTA
+
+.button-cta {
+  @extend %button;
+  color: $secondary !important;
+  background-color: $primary;
+  border-color: $secondary;
+  &:hover,
+  &:active,
+  &.active {
+    color: $primary !important;
+    background-color: $secondary-secondary;
+    border-color: $secondary-secondary;
+  }
+  &:focus,
+  &:focus-within,
+  &:focus-visible {
+    box-shadow: 0 0 0 3px $secondary-ternary !important;
+  }
+}
+
+// Button Text
+
+.button-text {
+  @extend %button;
+  min-width: 18vw;
+  color: $primary-ternary !important;
+  border-color: $primary-ternary;
+  &:hover,
+  &:active,
+  &.active {
+    color: $primary !important;
+    background-color: $primary-ternary;
+    border-color: $primary-ternary;
+  }
+  &:focus,
+  &:focus-within,
+  &:focus-visible {
+    box-shadow: 0 0 0 3px $secondary-ternary !important;
+  }
+}
+
+// Button Checkout
+.subtotal {
+  padding: 3em;
+  margin: 3em 0 0 0;
+  text-align: center;
+  background-color: $secondary-ternary;
+  h4 {
+    color: $primary-ternary !important;
+    margin: 0 0 1.6em 0;
+  }
+  .button-checkout {
+    @extend %button;
+    color: $primary !important;
+    border-color: $primary;
+    &:hover,
+    &:active,
+    &.active {
+      color: $primary !important;
+      background-color: $secondary;
+      border-color: $secondary;
+    }
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+      box-shadow: 0 0 0 3px $secondary-ternary !important;
+    }
+  }
+}
+
+// Button Group
+
+.button-group {
+  margin: 3em 0;
+  .btn {
+    margin: 0 0.9em 0.9em 0;
+  }
+  h5,
+  h6 {
+    padding-bottom: 0.9em !important;
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width: 1200px) {
+  .btn-flex {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .button-group {
+    margin: 1.9em 0;
+    a {
+      margin: 0.6em 0;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+//// Modal
+
+%modal {
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 50vw;
+    min-height: 50vh;
+    padding: 0;
+    color: transparent;
+    background-color: transparent;
+    border-width: 0.03em;
+    border-style: solid;
+    border-radius: 0.3em !important;
+    border-color: transparent;
+    box-shadow: $large-shadow;
+    .modal-body {
+      iframe {
+        border-width: 0.03em;
+        border-style: solid;
+        border-radius: 0.3em !important;
+        border-color: transparent;
+      }
+    }
+    .modal-header {
+      padding: 0;
+      border: transparent;
+      .close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 2;
+        opacity: 1;
+        padding: 0.9em 0.3em;
+        color: transparent;
+        background-color: transparent;
+        border-width: 0.03em;
+        border-style: solid;
+        border-color: transparent;
+        border-radius: 0.3em !important;
+        i {
+          font-size: 0.8em;
+          color: transparent;
+          border-color: transparent !important;
+          text-shadow: none;
+        }
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:active,
+        &.active,
+        &.active {
+          background-color: transparent;
+          i {
+            color: transparent;
+          }
+          transition-delay: 0.1s;
+          transition-duration: 0.3s;
+          transition-timing-function: linear;
+        }
+      }
+    }
+  }
+
+  .modal-dialog {
+    display: flex;
+    align-items: center;
+  }
+
+  .modal-backdrop {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+}
+
+// Video Modal
+
+.video-modal {
+  @extend %modal;
+  .modal-content {
+    border-color: $secondary;
+    background-color: $primary;
+    .modal-body {
+      padding: 0;
+    }
+    .modal-header {
+      .close {
+        background-color: $secondary-secondary;
+        border-color: $secondary-secondary;
+        i {
+          color: $primary !important;
+        }
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:focus-visible,
+        &:active,
+        &.active {
+          background-color: $primary;
+          border-color: $secondary-secondary;
+          i {
+            color: $secondary-secondary !important;
+          }
+        }
+      }
+    }
+  }
+  .modal-backdrop {
+    background: $primary-ternary;
+  }
+}
+
+// Video Modal
+
+.subscription-modal {
+  @extend %modal;
+  .modal-content {
+    border-color: $secondary;
+    background-color: $primary;
+    margin: 0 auto;
+    .modal-body {
+      padding: 6em;
+      h2 {
+        color: $light;
+      }
+      p {
+        color: $secondary;
+      }
+      a {
+        color: $secondary-secondary !important;
+        &:hover {
+          color: $primary-secondary !important;
+        }
+      }
+      .image {
+        display: flex;
+        margin-bottom: 6vw;
+        max-height: 100px;
+        width: 100%;
+        overflow: hidden;
+        border-width: 0.03em;
+        border-style: solid;
+        border-radius: 0 !important;
+        border-color: $primary-ternary;
+        box-shadow: $large-shadow;
+        img,
+        picture {
+          align-self: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    }
+    .modal-header {
+      .close {
+        background-color: $secondary-secondary;
+        border-color: $secondary-secondary;
+        i {
+          color: $primary !important;
+        }
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:focus-visible,
+        &:active,
+        &.active {
+          background-color: $primary;
+          border-color: $secondary-secondary;
+          i {
+            color: $secondary-secondary !important;
+          }
+        }
+      }
+    }
+  }
+  .modal-backdrop {
+    background: $primary-ternary;
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width: 1200px) {
+  .subscription-modal {
+    .modal-content {
+      .modal-body {
+        padding: 3em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .video-modal {
+    .modal-content {
+      min-height: auto;
+      min-width: auto;
+    }
+  }
+  .subscription-modal {
+    .modal-content {
+      min-height: auto;
+      min-width: auto;
+    }
+  }
+}

@@ -1,0 +1,207 @@
+//// Navigation
+
+%navigation {
+  position: relative;
+  color: transparent;
+  background-color: transparent;
+  padding: 0.3em 1.6em !important;
+  z-index: 3;
+  .navbar {
+    border-color: transparent;
+  }
+  ul {
+    padding: 0 1.6em;
+    li {
+      padding: 0.6em;
+      a {
+        color: transparent;
+        font-family: $sans-serif;
+        font-weight: $sans-serif-regular;
+        &:hover,
+        &:active,
+        &.active {
+          color: transparent;
+        }
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+          background: transparent;
+          background-color: transparent;
+          box-shadow: transparent;
+        }
+      }
+    }
+  }
+  .dropdown-menu {
+    background-color: transparent;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0.03em;
+    border-radius: 0 !important;
+    padding: 0.6em;
+    text-decoration: none;
+    box-shadow: $small-shadow;
+    .dropdown-item {
+      display: block;
+      font-family: $serif;
+      font-size: 14px;
+      color: transparent;
+      padding: 0.9em;
+      margin: 0.6em 0;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 0.03em;
+      border-radius: 0 !important;
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:focus-visible,
+      &:active,
+      &.active {
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 0.03em;
+        border-radius: 0 !important;
+      }
+    }
+    .dropdown-divider {
+      border-width: 0.03em;
+      margin: 0;
+    }
+  }
+}
+
+// Navigation One
+
+.navigation {
+  @extend %navigation;
+  color: $light;
+  background-color: $primary;
+  box-shadow: $large-shadow;
+
+  ul {
+    li {
+      a {
+        color: $light !important;
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:focus-visible,
+        &:active,
+        &.active {
+          fill: $secondary !important;
+          color: $secondary !important;
+        }
+      }
+      .button-cta {
+        color: $light !important;
+        border-color: $light !important;
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:focus-visible,
+        &:active,
+        &.active {
+          color: $primary !important;
+          border-color: $secondary !important;
+        }
+      }
+    }
+  }
+  .toggler {
+    &:active {
+      .bar-1 {
+        transform: translate3d(0, 100%, 0) scale(0.05, 1) rotate(0deg);
+        transition-delay: 100ms;
+      }
+      .bar-2 {
+        transform: translate3d(0, 0, 0) scale(0.05, 1) rotate(0deg);
+        transition-delay: 200ms;
+      }
+      .bar-3 {
+        transform: translate3d(0, -100%, 0) scale(0.05, 1) rotate(0deg);
+        transition-delay: 300ms;
+      }
+    }
+  }
+
+  svg {
+    fill: $light !important;
+    color: $light !important;
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:focus-visible,
+    &:active,
+    &.active {
+      fill: $secondary-secondary !important;
+      color: $secondary-secondary !important;
+    }
+  }
+  .dropdown-menu {
+    background-color: $secondary;
+    border-color: $primary;
+    .dropdown-item {
+      color: $light;
+      background-color: $secondary;
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:focus-visible,
+      &:active,
+      &.active {
+        color: $light;
+        background-color: $primary-ternary;
+        border-color: $primary;
+      }
+    }
+    .dropdown-divider {
+      border-color: $primary;
+    }
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width: 1200px) {
+  .navigation {
+    text-align: center;
+    .navbar-collapse {
+      padding: 1.6em 0 0.3em 0;
+      background-color: transparent;
+      li {
+        padding: 0.9em;
+        border-bottom-color: $light-ternary;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        &:last-child {
+          border-color: transparent;
+        }
+      }
+    }
+    .dropdown-menu {
+      border-color: $primary;
+    }
+    .navbar-toggler {
+      color: $primary;
+      border-color: $primary-ternary;
+    }
+    .navigation-contact {
+      margin: 1.6em 0;
+      position: relative;
+    }
+  }
+  .navbar-collapse {
+    background-color: $secondary;
+    border-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .navigation {
+    padding: 0.6em 0 !important;
+  }
+}

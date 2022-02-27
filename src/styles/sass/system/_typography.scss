@@ -1,0 +1,163 @@
+//// react-axios-portfolio Typography
+
+// System Font Styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+span {
+  line-height: 1.4;
+  font-smooth: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 60px;
+  color: $primary;
+  font-family: $sans-serif;
+  font-weight: $sans-serif-regular;
+}
+
+h2 {
+  font-size: 40px;
+  color: $primary;
+  font-family: $sans-serif;
+  font-weight: $sans-serif-bold;
+}
+
+h3 {
+  font-size: 20px;
+  color: $primary;
+  font-family: $serif;
+  font-weight: $sans-serif-regular;
+}
+
+h4 {
+  font-size: 20px;
+  color: $primary;
+  font-family: $serif;
+  font-weight: $serif-bold;
+}
+
+h5 {
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: $dark;
+  font-family: $sans-serif;
+  font-weight: $sans-serif-regular;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: $dark;
+  font-family: $serif;
+  font-weight: $serif-bold;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
+  color: $dark;
+  font-family: $sans-serif;
+  font-weight: $sans-serif-regular;
+}
+
+a {
+  font-size: 16px;
+  color: $secondary !important;
+  font-family: $serif;
+  font-weight: $serif-regular;
+  text-decoration: none !important;
+  transition: all;
+  transition-delay: 0.1s;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  &:hover,
+  &:focus,
+  &:focus-within,
+  &:focus-visible,
+  &:active,
+  &.active {
+    color: $light;
+  }
+}
+
+hr {
+  border-style: solid;
+  border-color: $dark;
+  border-width: 0.03em;
+}
+
+// Adjustments
+
+.muted {
+  opacity: 0.3;
+}
+
+.bold {
+  font-weight: $sans-serif-bold;
+}
+.lead a {
+  font-size: 1.25rem !important;
+}
+
+.underlined {
+  cursor: pointer;
+  background-image: linear-gradient(-90deg, $secondary 0%, $primary 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.09em;
+  background-position: 0 100%;
+  transition: all 0.3s linear;
+  &:hover,
+  &:focus,
+  &:focus-within,
+  &:focus-visible,
+  &:active,
+  &.active {
+    scale: 1.3;
+    color: $light;
+    background-size: 100% 100%;
+  }
+}
+
+.border-gradient {
+  border-style: solid !important;
+  border-width: 0.3em !important;
+  border-image-slice: 1 !important;
+  border-image-source: linear-gradient(
+    -90deg,
+    $secondary 0%,
+    $primary 100%
+  ) !important;
+}
+
+// Highlights
+
+::-moz-selection {
+  background: $primary-ternary;
+  text-shadow: none;
+}
+::selection {
+  background: $primary-ternary;
+  text-shadow: none;
+}
+
+// Media Queries
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2,
+  h3 {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,299 @@
+%media {
+  position: relative;
+  padding: 6em;
+  background-color: transparent;
+  .media {
+    .media-object {
+      height: 100px !important;
+      width: 100px !important;
+      margin: 1.6em;
+      padding: 0.6em;
+      border-width: 0.03em;
+      border-style: solid;
+      border-radius: 0 !important;
+      border-color: transparent;
+      box-shadow: $small-shadow;
+      background-image: linear-gradient(-90deg, $secondary 0%, $primary 100%);
+    }
+    .media-body {
+      padding: 0.9em;
+    }
+  }
+}
+
+// Technologies
+
+.technologies {
+  @extend %media;
+  background-color: $primary;
+  .heading {
+    padding-bottom: 3em;
+    h2 {
+      text-align: center;
+      color: $light;
+    }
+    h6 {
+      text-align: center;
+      color: $light;
+    }
+  }
+
+  .media {
+    color: $light;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    .media-object {
+      display: block;
+      align-self: center;
+      border-color: $secondary;
+    }
+    .media-body {
+      display: block;
+      align-self: center;
+    }
+    h4 {
+      color: $secondary;
+    }
+    p {
+      color: $light;
+    }
+  }
+}
+
+// Publications
+
+.publications {
+  @extend %media;
+  background-color: $primary;
+  a {
+    color: transparent !important;
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: $large-shadow;
+    background-color: $primary;
+    &:first-child {
+      border-width: 0.03em;
+      border-style: solid;
+      border-radius: 0 !important;
+      border-color: $primary-ternary !important;
+    }
+    &:nth-child(odd) {
+      border-width: 0.03em;
+      border-style: solid;
+      border-radius: 0 !important;
+      border-color: $primary-ternary;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+    }
+    &:nth-child(even) {
+      border-width: 0.03em;
+      border-style: solid;
+      border-radius: 0 !important;
+      border-color: $primary-ternary;
+      border-top-color: transparent;
+    }
+    &:last-child {
+      border-width: 0.03em;
+      border-style: solid;
+      border-radius: 0 !important;
+      border-color: $primary-ternary !important;
+    }
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:focus-visible,
+    &:active,
+    &.active {
+      scale: 1.1;
+      border-width: 0.03em;
+      border-style: solid;
+      border-radius: 0 !important;
+      border-color: $primary-ternary !important;
+      scale: 1.1;
+      z-index: 2;
+    }
+  }
+
+  .heading {
+    padding-bottom: 3em;
+    h2 {
+      text-align: center;
+      color: $light;
+    }
+    h6 {
+      text-align: center;
+      color: $light;
+    }
+  }
+  .media {
+    color: $light;
+    margin: 0.6em 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    &:after {
+      content: "∵";
+      transform: rotate(30deg);
+      display: block;
+      position: absolute;
+      color: $primary-ternary;
+      font-size: 60px;
+      padding: 0 0.6em;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+    .media-object {
+      width: 100px;
+      height: auto;
+      display: block;
+      align-self: center;
+      border-color: $primary;
+      padding: 0;
+    }
+    .media-body {
+      display: block;
+      align-self: center;
+    }
+    h4 {
+      color: $secondary;
+    }
+    h5 {
+      color: $light;
+      padding-bottom: 0.9em;
+    }
+    p {
+      color: $light;
+    }
+  }
+}
+
+// Roles
+
+.roles {
+  @extend %media;
+  padding: 6em 9em 9em 9em;
+  background-color: $primary;
+  a {
+    color: transparent !important;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0.6em 0;
+    box-shadow: $large-shadow;
+    border-width: 0.03em;
+    border-style: solid;
+    border-radius: 0 !important;
+    border-color: $primary-ternary;
+    background-color: $light;
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:focus-visible,
+    &:active,
+    &.active {
+      background-color: $secondary;
+    }
+  }
+
+  .heading {
+    padding-bottom: 3em;
+    h2 {
+      text-align: center;
+      color: $light;
+    }
+    h6 {
+      text-align: center;
+      color: $light;
+    }
+  }
+  .media {
+    color: $light;
+    margin: 0.6em 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    min-height: 200px;
+    .media-object {
+      width: 150px !important;
+      height: auto !important;
+      display: block;
+      align-self: center;
+      border-color: transparent !important;
+      background-color: transparent !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      padding: 0;
+    }
+    .media-body {
+      display: block;
+      align-self: center;
+    }
+    h4 {
+      color: $primary;
+    }
+    h5 {
+      color: $primary;
+      padding-bottom: 0.9em;
+    }
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width: 1200px) {
+  .publications {
+    padding: 3em;
+    .media {
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      .media-object {
+        margin-bottom: 0.3em;
+      }
+    }
+  }
+  .roles {
+    padding: 3em;
+    .media {
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      .media-object {
+        margin-bottom: 0.3em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .technologies {
+    padding: 3em;
+    .col-xl-6 {
+      margin: 0;
+      padding: 0;
+    }
+    .media {
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      .media-object {
+        margin-bottom: 0.3em;
+      }
+    }
+  }
+}
