@@ -6,8 +6,6 @@
 
 React Axios Portfolio for building web, design & project portfolios in React.js with Bootstrap utilizing [Next.js](https://vercel.com/) (Vercel) for simplified deployment with [Create React App](https://create-react-app.dev/) & [Node.js](https://nodejs.org/en/) configuration available by [Open Source](https://opensource.org/).
 
-**[View Demo](https://react-axios-portfolio.vercel.app/)**
-
 ## Contents
 
 - [About](#about)
